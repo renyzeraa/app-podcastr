@@ -1,15 +1,16 @@
 import type { Metadata } from "next"
-import { Geist, Geist_Mono } from "next/font/google"
+import { Inter, Lexend } from "next/font/google"
+import '../styles/global.scss'
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const interSerif = Inter({
+  variable: "--font-inter-serif",
   subsets: ["latin"],
-});
+})
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const lexendSerif = Lexend({
+  variable: "--font-inter-serif",
   subsets: ["latin"],
-});
+})
 
 export const metadata: Metadata = {
   title: "Início | Podcastr",
@@ -22,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${interSerif.variable} ${lexendSerif.variable}`}>
         {children}
       </body>
     </html>
