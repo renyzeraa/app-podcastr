@@ -19,7 +19,7 @@ Layout do [figma](<https://www.figma.com/design/sqt4lNz9e3wHLM0eghvTYd/Podcastr-
 ### 1. Clonar o Repositório
 
 ```bash
-git clone https://github.com/seu-usuario/app-podcastr.git
+git clone https://github.com/renyzeraa/app-podcastr.git
 ```
 
 ### 2. Instalar Dependências
