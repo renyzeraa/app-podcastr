@@ -1,6 +1,8 @@
 import type { Metadata } from "next"
 import { Inter, Lexend } from "next/font/google"
 import '../styles/global.scss'
+import styles from '../styles/app.module.scss'
+import { Header } from "@/components/header"
 
 const interSerif = Inter({
   variable: "--font-inter-serif",
@@ -23,7 +25,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={`${interSerif.variable} ${lexendSerif.variable}`}>
+      <body className={`${interSerif.variable} ${lexendSerif.variable} ${styles.wrapper}`}>
+        <Header />
         {children}
       </body>
     </html>
