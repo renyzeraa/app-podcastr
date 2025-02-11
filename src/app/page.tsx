@@ -42,11 +42,12 @@ export default async function Home() {
     }
   });
   const episodes: Episode[] = (data as EpisodeInput[]).map(filterEpisodesResponseData)
-
+  const latestEpisodes: Episode[] = episodes.slice(0, 2);
+  const allEpisodes: Episode[] = episodes.slice(2, episodes.length)
   return (
     <div className={styles.wrapper}>
       <Header />
-      <Main episodes={episodes} />
+      <Main allEpisodes={allEpisodes} latestEpisodes={latestEpisodes} />
       <Player />
     </div>
   );
