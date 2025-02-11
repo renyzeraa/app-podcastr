@@ -1,5 +1,9 @@
+import { Header } from "@/components/header";
 import { Player } from "@/components/player";
 import { api } from "@/services/api";
+import { filterEpisodesResponseData } from "@/utils/convert";
+import styles from '../styles/app.module.scss'
+import { Main } from "@/components/main";
 
 type File = {
   url: string
@@ -7,7 +11,7 @@ type File = {
   duration: number
 }
 
-type Episode = {
+export type EpisodeInput = {
   id: string
   title: string
   members: string
@@ -17,8 +21,16 @@ type Episode = {
   file: File
 }
 
-type HomeProps = {
-  episodes: Episode[]
+export type Episode = {
+  description: string
+  duration: number
+  url: string
+  id: string
+  members: string
+  publishedAt: string
+  thumbnail: string
+  title: string
+  durationAsString: string
 }
 
 export default async function Home() {
@@ -29,10 +41,13 @@ export default async function Home() {
       _order: 'desc'
     }
   });
-  console.log(data);
+  const episodes: Episode[] = (data as EpisodeInput[]).map(filterEpisodesResponseData)
+
   return (
-    <main>
+    <div className={styles.wrapper}>
+      <Header />
+      <Main episodes={episodes} />
       <Player />
-    </main>
+    </div>
   );
 }

@@ -1,7 +1,6 @@
 .wrapper {
-  display: flex;
-
-  > header {
-    flex: 1;
-  }
+  display: grid;
+  grid-template-columns: auto 26.5rem;
+  grid-template-rows: auto 1fr 1fr;
+  max-height: 100vh;
 }
