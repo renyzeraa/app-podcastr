@@ -1,6 +1,8 @@
 .wrapper {
-  display: grid;
-  grid-template-columns: auto 26.5rem;
-  grid-template-rows: auto 1fr 1fr;
-  max-height: 100vh;
+  display: flex;
+
+  main {
+    flex: 1;
+    width: calc(26.5rem - 100%);
+  }
 }
