@@ -1,4 +1,4 @@
-import { Episode } from '@/app/page'
+import { Episode } from '@/@types/episode'
 import styles from './styles.module.scss'
 import Image from 'next/image'
 

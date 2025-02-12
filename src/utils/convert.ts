@@ -1,4 +1,4 @@
-import { EpisodeInput } from "@/app/page"
+import { EpisodeInput } from "@/@types/episode"
 import { format, parseISO } from "date-fns"
 import { ptBR } from "date-fns/locale"
 

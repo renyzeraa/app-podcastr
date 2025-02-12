@@ -4,34 +4,7 @@ import { api } from "@/services/api";
 import { filterEpisodesResponseData } from "@/utils/convert";
 import styles from '../styles/app.module.scss'
 import { Main } from "@/components/main";
-
-type File = {
-  url: string
-  type: string
-  duration: number
-}
-
-export type EpisodeInput = {
-  id: string
-  title: string
-  members: string
-  published_at: string
-  thumbnail: string
-  description: string
-  file: File
-}
-
-export type Episode = {
-  description: string
-  duration: number
-  url: string
-  id: string
-  members: string
-  publishedAt: string
-  thumbnail: string
-  title: string
-  durationAsString: string
-}
+import type { Episode, EpisodeInput } from "@/@types/episode";
 
 export default async function Home() {
   const { data } = await api.get("episodes", {
