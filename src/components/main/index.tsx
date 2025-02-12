@@ -28,6 +28,43 @@ export function Main({ latestEpisodes, allEpisodes }: MainProps) {
         </ul>
       </section>
       <section className={styles.allEpisodes}>
+        <h2>Todos episódios</h2>
+        <table cellSpacing={0}>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Podcast</th>
+              <th>Integrantes</th>
+              <th>Data</th>
+              <th>Duração</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            {allEpisodes.map(episode => (
+              <tr key={episode.id}>
+                <td width={72}>
+                  <Image
+                    alt={episode.title}
+                    src={episode.thumbnail}
+                    width={128}
+                    height={128}
+                    objectFit='cover'
+                  />
+                </td>
+                <td><a href="">{episode.title}</a></td>
+                <td>{episode.members}</td>
+                <td width={110}>{episode.publishedAt}</td>
+                <td>{episode.durationAsString}</td>
+                <td>
+                  <button type='button'>
+                    <img src="play-green.svg" alt="Tocar episódio" />
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </section>
     </div>
   )
