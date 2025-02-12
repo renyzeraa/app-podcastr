@@ -1,18 +1,20 @@
-import { ptBR } from 'date-fns/locale'
-import styles from './styles.module.scss'
-import { format } from 'date-fns'
+
+import { format } from 'date-fns';
+import styles from './styles.module.scss';
+import { ptBR } from 'date-fns/locale';
 
 export function Header() {
-  const currentDate = format(new Date(), 'EEEEEE, d MMM', {
+  const currentDate = format(new Date(), 'EEEEEE, d MMMM', {
     locale: ptBR,
-  }).toString()
+  });
+
   return (
     <header className={styles.headerContainer}>
-      <img src="./logo.svg" alt="Logo" />
+      <img src="/logo.svg" alt="Podcastr" />
 
       <p>O melhor para você ouvir, sempre</p>
 
       <span>{currentDate}</span>
     </header>
-  )
+  );
 }
