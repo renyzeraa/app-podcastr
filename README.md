@@ -1,6 +1,6 @@
 # Podcastr 🎵🎼
 
-O podcastr é um app para reprodução de episódios em áudio do seu podcast favorito.
+O podcastr é um app para reprodução de episódios em áudio do seu podcast favorito. Utilizando SSG (Static Site Generator).
 
 ## Tecnologias Utilizadas
 
