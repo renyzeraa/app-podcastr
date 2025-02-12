@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "concurrently \"npm run server\" \"next build\"",
     "start": "next start",
     "lint": "next lint",
     "server": "json-server --watch server.json --port 3333"
@@ -13,15 +13,16 @@
     "axios": "^1.7.9",
     "date-fns": "^4.1.0",
     "next": "15.1.6",
+    "rc-slider": "^9.7.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "sass": "^1.83.4",
-    "rc-slider": "^9.7.2"
+    "sass": "^1.83.4"
   },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "concurrently": "^9.1.2",
     "json-server": "^1.0.0-beta.3",
     "typescript": "^5"
   }
