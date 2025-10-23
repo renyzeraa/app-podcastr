@@ -10,7 +10,7 @@ O podcastr é um app para reprodução de episódios em áudio do seu podcast fa
 
 ## Layout
 
-![Image](https://github.com/rocketseat-education/nlw-05-reactjs/blob/main/.github/podcastr.png)
+<img width="1073" height="610" alt="image" src="https://github.com/user-attachments/assets/343d5ee5-bf1b-4c09-97e5-bdf2664d19d4" />
 
 Layout do [figma](<https://www.figma.com/design/sqt4lNz9e3wHLM0eghvTYd/Podcastr-(Copy)?node-id=160-2761&p=f&t=cxW9MjMLqWtf6xHo-0>)
 
